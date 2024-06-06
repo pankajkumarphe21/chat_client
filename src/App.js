@@ -13,6 +13,7 @@ function App() {
   const joinRoom = () => {
     if (userName !== "" && room !== "") {
       socket.emit("join_room", room);
+      console.log(socket)
     }
     setShowChat(true);
   }
