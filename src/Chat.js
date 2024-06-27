@@ -32,16 +32,17 @@ const Chat = ({ socket, userName, room }) => {
   }, [socket, messages])
   return (
     <div className='chat-window'>
+      <h1>{userName}</h1>
       <div className='chat-header'>
         <p>Live Chat</p>
       </div>
       <div className='chat-body'>
         {
           messages.map((element, i) => {
-            return (<>
-              {element.author === userName ? <div className='you' key={i}>{element.message}</div> : <div className='other' key={i}>{element.message}</div>}
+            return (<div key={i}>
+              {element.author === userName ? <div className='you' >{element.message}</div> : <div className='other' >{element.message}</div>}
               <br /> <br />
-            </>)
+            </div>)
           })
         }
       </div>
