@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import { useState } from "react"
 import Chat from './Chat';
 
-const socket = io.connect("https://chat-production-6a6d.up.railway.app/")
+const socket = io.connect("https://chat-production-a259.up.railway.app")
 
 function App() {
   const [userName, setUserName] = useState("");
